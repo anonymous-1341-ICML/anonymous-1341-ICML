@@ -1,6 +1,6 @@
 # TSCD: Tri-Stream Coupled Dynamics for Forward Learning
 
-Official implementation of **"Overcoming Information and Approximation Errors in Forward Learning via Tri-Stream Coupled Dynamics"** (ICML 2026).
+Official implementation of **"Overcoming Information and Approximation Errors in Forward Learning via Tri-Stream Coupled Dynamics"** (ICML 2026 Submission).
 
 ## Overview
 
@@ -151,7 +151,7 @@ for epoch e = 1 to E:
 ```bibtex
 @inproceedings{tscd2026,
   title={Overcoming Information and Approximation Errors in Forward Learning via Tri-Stream Coupled Dynamics},
-  booktitle={International Conference on Machine Learning (ICML)},
+  booktitle={International Conference on Machine Learning (ICML) Submission},
   year={2026}
 }
 ```
