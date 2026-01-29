@@ -1,0 +1,38 @@
+# ==========================================================================
+#  TSCD Default Hyperparameters
+#  "Overcoming Information and Approximation Errors in Forward Learning
+#   via Tri-Stream Coupled Dynamics" (ICML 2026)
+# ==========================================================================
+
+# --- Model ---
+backbone: "10layer_cnn"         # Backbone architecture
+gamma: 0.1                      # Nudging factor (Eq 1)
+lambda_asym: 0.5                # Asymmetry coefficient (Eq 6)
+goodness_threshold: 2.0         # Goodness threshold (Eq 6)
+
+# --- Training ---
+epochs: 500
+batch_size: 256
+lr: 1.0e-3
+weight_decay: 0.0
+seed: 42
+
+# --- Tri-Stream Fusion (Section 4.1) ---
+fusion_interval: 100            # T: cross-fusion every T epochs (Line 13)
+fusion_steps: 10                # T_fine: fine-tuning steps for N_C (Line 16)
+
+# --- MP-GBS (Section 4.2, Eq 13-16) ---
+use_mp_gbs: true
+mp_gbs_rho: 0.05               # Perturbation radius rho
+
+# --- TF-GVS (Section 4.2, Eq 17-18) ---
+use_tf_gvs: true
+tf_gvs_window: 3               # M: temporal window size
+
+# --- Logging ---
+log_interval: 10                # Evaluate every N epochs
+save_interval: 100              # Checkpoint every N epochs
+
+# --- Data ---
+data_root: "./data"
+num_workers: 4

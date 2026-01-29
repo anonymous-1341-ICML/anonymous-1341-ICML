@@ -1,0 +1,15 @@
+# TSCD on CIFAR-100 (Table 1)
+dataset: "cifar100"
+backbone: "10layer_cnn"
+epochs: 500
+batch_size: 256
+lr: 1.0e-3
+weight_decay: 0.0
+gamma: 0.1
+goodness_threshold: 2.0
+fusion_interval: 100
+fusion_steps: 10
+use_mp_gbs: true
+mp_gbs_rho: 0.05
+use_tf_gvs: true
+tf_gvs_window: 3
